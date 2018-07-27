@@ -14,7 +14,6 @@ public class resumeApp {
                 skills = "", skillset = "", skill = "";
         int i = 1, j = 0;
 
-
         System.out.println("Welcome to Krusty Krab inc, I need to access your resume, lets get started.");
 
        System.out.println("What is your name?");
@@ -77,20 +76,21 @@ public class resumeApp {
                 }
                 jobd = jobd + "Duty: " + jobdescription + "\n";
             }
-
+            i=0;
             System.out.println("Add another job? yes to continue, d for done.");
             job = keyboard.next();
-            adjob = adjob + jobtitle + "\n" + company + "; " + startdate + " - " + enddate + "\n" + jobdescription + "\n";
+            adjob = adjob + jobtitle + "\n" + company + "; " + startdate + " - " + enddate + "\n" + jobdescription + "\n"+"\n";
+            jobd="";
 
             if (job.contains("d")) {
                 j = 10;
-                i = 10;
             }
 
         }
 
 
-       /System.out.println("Now lets get to the skills that you have.");
+
+       System.out.println("Now lets get to the skills that you have.");
 
         while (!skillset.contains("d")) {
             System.out.println("enter a skill.");
@@ -101,12 +101,13 @@ public class resumeApp {
         }
 
 
+
         //============================================================================//
 
 
         System.out.println("===========================================");
-        System.out.println("Name = " + naim);
-        System.out.println("email = " + email + "\n");
+        System.out.println(naim);
+        System.out.println(email + "\n");
 
         System.out.println("Education");
         System.out.println(additup + "\n");
